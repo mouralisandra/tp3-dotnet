@@ -1,0 +1,31 @@
+﻿@model Person
+
+@{
+    ViewData["Title"] = Html.DisplayFor(person => person.FirstName);
+}
+
+<h2>
+    @Html.DisplayFor(model => model.FirstName)
+    @Html.DisplayFor(model => model.LastName)
+</h2>
+
+<section class="d-flex gap-5">
+    <div>
+        <img src=@Model.Image
+             alt=@Model.FirstName>
+    </div>
+    <div>
+        <div>
+            <b>@Html.DisplayNameFor(person => person.Id):</b>
+            @Html.DisplayFor(person => person.Id)
+        </div>
+        <div>
+            <b>@Html.DisplayNameFor(person => person.Email):</b>
+            @Html.DisplayFor(person => person.Email)
+        </div>
+        <div>
+            <b>@Html.DisplayNameFor(person => person.Country):</b>
+            @Html.DisplayFor(person => person.Country)
+        </div>
+    </div>
+</section>
